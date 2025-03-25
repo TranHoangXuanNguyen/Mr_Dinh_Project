@@ -1,7 +1,7 @@
 
 # Full stack project
 
-A full stack project using Angular for front-end and Laravel for back-end
+A full stack project using Html/Css for front-end and Laravel for back-end
 
 
 
@@ -42,7 +42,7 @@ A full stack project using Angular for front-end and Laravel for back-end
 
 ## Tech Stack
 
-**Client:** Angular, Bootstrap
+**Client:** Html/Css
 
 **Server:** Laravel
 
