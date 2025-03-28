@@ -1,0 +1,487 @@
+/* Reset mặc định */
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+    font-family: 'Urbanist', sans-serif;
+}
+
+body {
+    background-color: #f4f4f4;
+    color: #333;
+    height: 200vh;
+}
+
+
+
+
+/* Blog Container */
+.blog-container {
+    display: flex;
+    max-width: 100%;
+    margin-top: 0; /* Đảm bảo bắt đầu từ đầu trang */
+    position: absolute;
+    top: 0;
+    left: 0;
+    width: 100%;
+}
+
+.blog1, .blog2, .blog3 {
+    width: 100%;
+    transition: transform 0.3s;
+    position: relative;
+
+}
+
+.blog1:hover, .blog2:hover, .blog3:hover {
+    transform: translateY(-5px);
+}
+
+.blog1 img, .blog2 img, .blog3 img {
+    width: 100%;
+    height: 750px;
+}
+
+.blog1 .a, .blog2 .a, .blog3 .a {
+    display: flex;
+    text-decoration: none;
+    font-size: 30px;
+    color: white;
+    font-weight: bold;
+    position: absolute;
+    bottom: 20px;
+    width: 75%;
+    padding-left: 20px;
+}
+.blog1 .a, .blog2 .a, .blog3 .a, .icon header {
+    display: flex;
+    align-items: last baseline;
+    gap: 50px;
+}
+
+
+/* Slogan */
+.slogan {
+    text-align: center;
+    font-size: 50px;
+    font-weight: bold;
+    margin: 40px 0;
+    color: white;
+    position: absolute;
+    top: 40%;
+    left: 50%;
+    transform: translate(-50%, -50%);
+}
+
+/* Featured Container */
+
+.featured-container {
+    margin-top: 800px;
+    position: relative;
+    display: flex;
+    flex-direction: column; 
+    align-items: center;
+    text-align: center;
+}
+.featured p {
+    font-size: 30px;
+    font-weight: bold;
+    margin-bottom: 20px;
+}
+.images-featured {
+    display: flex;
+    gap: 140px;
+    margin-top: 20px;
+    padding:0 40px ;
+}
+.images-featured img {
+    width: 170px;
+    height: 70px;
+    transition: transform 0.3s;
+}
+
+.images-featured img:hover {
+    transform: translateY(-5px);
+}
+
+/* Plan Trip */
+.plan-trip {
+    padding: 0 55px;
+    margin-top: 100px;
+    position: relative;
+
+}
+.plan-trip-content {
+    display: flex;
+}
+.plan-trip-btn {
+    margin-top: 20px;
+    display: flex;
+    justify-content: end;
+    margin-left: 66%;
+}
+.plan-trip-btn .btn-trip {
+    width: 155px;
+    height: 40px;
+    border: none;
+    cursor: pointer;
+    border-radius: 50px;
+    font-size: 14px;
+    font-weight: bold;
+    border: 1px solid #4169E1;
+    background: transparent;
+    color: #4169E1;
+    transition: background-color 0.3s;
+}
+.plan-trip-btn .btn-trip:hover {
+    background-color: #4169E1;
+    color: white;
+}
+.plan-trip h2 {
+    font-size: 30px;
+    font-weight: bold;
+    margin-bottom: 15px;
+}
+.plan-trip-images {
+    display: flex;
+    justify-content: center;
+    gap: 50px;
+    margin-top: 30px;
+}
+.plan-trip-image img {
+    border-radius: 10%;
+    transition: transform 0.3s;
+}
+.plan-trip-image img:hover {
+    transform: translateY(-5px);
+}
+.plan-trip-image  p {
+    font-size: 20px;
+    font-weight: bold;
+    margin-top: 25px;
+}
+
+/* Top locations - Locations based  */
+.top {
+    padding: 0 55px;
+    margin-top: 100px;
+    position: relative;
+
+}
+.top-content {
+    display: flex;
+}
+.top-btn {
+    margin-top: 20px;
+    display: flex;
+    justify-content: space-between;
+    margin-left: 69%;
+    gap: 20px;
+}
+.top-btn a {
+    width: 50px;
+    height: 50px;
+    cursor: pointer;
+    border-radius: 50px;
+    text-decoration: none;
+    border: none;
+    background: #CDCCCC;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    transition: background-color 0.3s;
+}
+.top-btn a:hover {
+    background-color: #4169E1;
+    color: white;
+}
+.top-btn i {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    font-size: 20px;
+    cursor: pointer;
+}
+
+.top h2 {
+    font-size: 30px;
+    font-weight: bold;
+    margin-bottom: 15px;
+}
+.top-images {
+    display: flex;
+    justify-content: center;
+    gap: 50px;
+    margin-top: 30px;
+}
+.top-image img {
+    border-radius: 10%;
+    transition: transform 0.3s;
+}
+.top-image img:hover {
+    transform: translateY(-5px);
+}
+.top-image .top-description {
+    display: flex;
+    flex-direction: column;
+    margin-top: 25px;
+}
+.top-image .main-top-description{
+    font-size: 20px;
+    font-weight: bold;
+    margin-top: 15px;
+}
+
+/* Recent Searches */
+.recent {
+    padding: 0 55px;
+    margin-top: 100px;
+    position: relative;
+}
+.recent h2 {
+    font-size: 30px;
+    font-weight: bold;
+    margin-bottom: 15px;
+}
+.recent-search {
+    display: flex;
+    flex-wrap: wrap; 
+    padding-top: 30px;
+    gap: 99px; /*Tạm thời để khoảng cách như này*/
+}
+.recent-search .recent-places {
+    min-width: 200px; 
+    max-width: 350px; 
+    padding: 15px 25px; 
+    text-decoration: none;
+    cursor: pointer;
+    color: #000000;
+    display: flex;
+    align-items: center; 
+    border: 1px solid #A0A0A0;
+    border-radius: 9px;
+    gap: 15px; 
+}
+.recent-place {
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+}
+.recent-description {
+    font-size: 12px; 
+    color: #5B5B5B;
+}
+
+/* travel-sories */
+.travel-sories {
+    padding: 0 55px;
+    margin-top: 100px;
+    position: relative;
+}
+.travel-content {
+    display: flex;
+}
+.travel-btn {
+    margin-top: 20px;
+    display: flex;
+    justify-content: end;
+    margin-left: 69%;
+}
+.travel-btn .btn-travel {
+    width: 155px;
+    height: 40px;
+    border: none;
+    cursor: pointer;
+    border-radius: 50px;
+    font-size: 14px;
+    font-weight: bold;
+    border: 1px solid #4169E1;
+    background: transparent;
+    color: #4169E1;
+    transition: background-color 0.3s;
+}
+.travel-btn .btn-travel:hover {
+    background-color: #4169E1;
+    color: white;
+}
+.travel-text h2 {
+    font-size: 30px;
+    font-weight: bold;
+    margin-bottom: 15px;
+}
+
+.travel-container {
+    display: flex;
+    justify-content: center;
+    align-items: flex-start;
+    gap: 25px;
+    margin-top: 35px;
+}
+.travel-image img {
+    border-radius: 10%;
+    transition: transform 0.3s;
+}
+.location  {
+    display: flex;
+    justify-content: space-between;
+    font-size: 20px;
+}
+.location .place {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    color: #5B5B5B;
+}
+.travel-date {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    color: #5B5B5B;
+    gap: 10px;
+}
+.travel-date .dot {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    font-size: 40px;
+    font-weight: bold;
+    margin-bottom: 25px;
+}
+.travel-description .title {
+    font-size: 25px;
+    font-weight: bold;
+    margin-top: 10px;
+}
+.travel-description .description {
+    font-size: 20px;
+    color: #000000;
+    margin-top: 10px;
+    max-width: 80%;
+}
+.read-post {
+    display: flex;
+    justify-content: flex-start;
+    align-items: center;
+    font-size: 10px;
+    color: #5B5B5B;
+    gap: 10px;
+    margin-top: 20px;
+}
+.image {
+    width: 780px; 
+    height: 500px;
+    overflow: hidden; 
+    border-radius: 15px; 
+}
+
+.image img {
+    width: 100%;
+    height: 100%;
+    object-fit: cover; /* Cắt ảnh để vừa với khung */
+    object-position: center; /* Căn giữa nội dung ảnh */
+    transition: transform 0.3s ease-in-out;
+}
+.image img:hover {
+    transform: scale(1.05);
+}
+
+.read-post {
+    display: flex;
+    justify-content: flex-start;
+    align-items: center;
+    font-size: 17px;
+    color: #5B5B5B;
+    gap: 10px;
+    margin-top: 25px;
+    font-weight: bold;
+    text-decoration: none;
+    color: #4169E1;
+}
+
+
+/* pagination */
+.pagination {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    padding-top: 100px;
+    gap: 10px;
+}
+
+.page-item {
+    width: 50px;
+    height: 50px;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    border: 1px solid #5B5B5B;
+    border-radius: 8px;
+    cursor: pointer;
+    font-size: 16px;
+    background-color: white;
+    transition: 0.3s;
+}
+.page-item:hover {
+    background-color: #e0e0e0;
+}
+.page-item, .dots, a {
+    text-decoration: none;
+    color: #333;
+    font-size: 16px;
+}
+/* Tạm thời */
+.active a {
+    text-decoration: none;
+    color: white;
+    font-size: 16px;
+}
+.active {
+    background-color: #4169E1;
+    color: white;
+    border-color: #3f51b5;
+
+}
+.active:hover {
+    background-color: #3f51b5;
+    color: white;
+}
+/* Tạm thời */
+.dots {
+    width: 50px;
+    height: 50px;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    border: 1px solid #5B5B5B;
+    background-color: white;
+    cursor: pointer;
+    border-radius: 8px;
+}
+.dots a {
+    text-decoration: none;
+    margin-bottom: 20px;
+    color: #333;
+    font-size: 30px;
+}
+.dots:hover {
+    background-color: #e0e0e0;
+}
+
+.arrow  {
+    background: none;
+    border: none;
+    cursor: pointer;
+}
+.arrow a {
+    text-decoration: none;
+    color: #666;
+    font-size: 30px;
+    font-weight: bold;
+    padding: 15px;
+}
+.arrow a:hover {
+    color: black;
+}
+
+
+

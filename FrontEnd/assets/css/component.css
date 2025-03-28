@@ -1,0 +1,169 @@
+/* Header */
+.header {
+    position: fixed;
+    width: 100%;
+    top: 0;
+    left: 0;
+    transition: background 0.3s ease-in-out;
+    background: transparent; 
+    padding: 10px;
+    z-index: 1000;
+}
+
+.header.scrolled { 
+    background: #0a1128; /* Khi cuộn xuống đổi thành màu đen */
+}
+
+/* Navbar */
+.navbar {
+    width: 100%;
+    height: 60px;
+    display: flex;
+    align-items: center;
+    justify-content: space-between; 
+    padding: 0 50px; 
+}
+
+/* Logo */
+.logo img {
+    height: 40px;
+}
+
+/* Navigation Menu */
+nav {
+    flex: 1; 
+    display: flex;
+    justify-content: center; 
+}
+
+nav ul {
+    display: flex;
+    list-style: none;
+    gap: 50px; 
+    margin: 0;
+    padding: 0;
+}
+
+nav ul li a {
+    text-decoration: none;
+    color: white;
+    font-weight: bold;
+    transition: color 0.3s;
+}
+
+nav ul li a:hover {
+    color: #ccc;
+}
+
+/* Search */
+.research {
+    display: flex;
+    align-items: center;
+    margin-left: auto; 
+}
+
+.research i {
+    color: white;
+    font-size: 18px;
+    cursor: pointer;
+}
+
+/* Account Controls */
+.account-controls {
+    display: flex;
+    align-items: center;
+    gap: 15px; 
+    margin-left: 30px; 
+}
+
+.account-controls button {
+    border: none;
+    cursor: pointer;
+    border-radius: 50px;
+    font-size: 14px;
+}
+
+.login-btn {
+    padding: 6px 20px;
+    background-color: white;
+    color: black;
+}
+
+.signup-btn {
+    padding: 6px 18px;
+    border: 1px solid white;
+    background: transparent;
+    color: white;
+}
+
+/* Footer */
+.footer {
+    background-color: #0a1128;
+    color: #ffffff;
+    padding: 40px 20px;
+    margin-top: 100px;
+    text-align: left;
+}
+
+.container {
+    max-width: 1200px;
+    margin: auto;
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: space-between;
+}
+
+.footer-columns {
+    display: flex;
+    flex-wrap: wrap;
+    width: 80%;
+    justify-content: space-between;
+}
+
+.footer-column {
+    margin-bottom: 20px;
+}
+
+.footer-column h3 {
+    font-size: 18px;
+    margin-bottom: 10px;
+}
+
+.footer-column ul {
+    list-style: none;
+}
+
+.footer-column ul li {
+    margin-bottom: 8px;
+}
+
+.footer-column ul li a {
+    color: #ffffff;
+    text-decoration: none;
+    transition: 0.3s;
+}
+
+.footer-column ul li a:hover {
+    text-decoration: underline;
+}
+
+.social-icons a {
+    color: #ffffff;
+    font-size: 18px;
+    margin-right: 10px;
+    text-decoration: none;
+    transition: 0.3s;
+}
+
+.social-icons a:hover {
+    color: #4169E1;
+}
+
+/* Footer Bottom */
+.footer-bottom {
+    text-align: center;
+    margin-top: 20px;
+    padding-top: 10px;
+    border-top: 1px solid #ffffff33;
+    font-size: 14px;
+}
