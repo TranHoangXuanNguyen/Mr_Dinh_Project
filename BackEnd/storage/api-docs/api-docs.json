@@ -1,0 +1,211 @@
+{
+    "openapi": "3.0.0",
+    "info": {
+        "title": "My API Documentation",
+        "description": "API Documentation for My Application",
+        "contact": {
+            "email": "hoangnguyendepgiai@gmail.com"
+        },
+        "version": "1.0.0"
+    },
+    "paths": {
+        "/api/test": {
+            "get": {
+                "tags": [
+                    "Blogs"
+                ],
+                "summary": "Get all blogs",
+                "operationId": "7b27aa9a0d977d49127a37be8e4617b5",
+                "responses": {
+                    "200": {
+                        "description": "Thành công",
+                        "content": {
+                            "application/json": {
+                                "schema": {
+                                    "type": "array",
+                                    "items": {
+                                        "$ref": "#/components/schemas/Blog"
+                                    }
+                                }
+                            }
+                        }
+                    }
+                }
+            },
+            "post": {
+                "tags": [
+                    "Blogs"
+                ],
+                "summary": "Create a new blog",
+                "operationId": "ad7e53ca85d3c125f604281696b88d5d",
+                "requestBody": {
+                    "required": true,
+                    "content": {
+                        "application/json": {
+                            "schema": {
+                                "required": [
+                                    "location",
+                                    "time_read",
+                                    "content"
+                                ],
+                                "properties": {
+                                    "location": {
+                                        "type": "string",
+                                        "example": "Hồ Chí Minh"
+                                    },
+                                    "up_time": {
+                                        "type": "string",
+                                        "format": "date-time",
+                                        "example": "2025-03-25 14:00:00"
+                                    },
+                                    "time_read": {
+                                        "type": "integer",
+                                        "example": 10
+                                    },
+                                    "content": {
+                                        "type": "string",
+                                        "example": "Nội dung bài viết..."
+                                    },
+                                    "image": {
+                                        "type": "string",
+                                        "example": "https://example.com/image.jpg"
+                                    }
+                                },
+                                "type": "object"
+                            }
+                        }
+                    }
+                },
+                "responses": {
+                    "201": {
+                        "description": "Blog created successfully",
+                        "content": {
+                            "application/json": {
+                                "schema": {
+                                    "$ref": "#/components/schemas/Blog"
+                                }
+                            }
+                        }
+                    }
+                }
+            }
+        },
+        "/api/test/{id}": {
+            "get": {
+                "tags": [
+                    "Blogs"
+                ],
+                "summary": "Get a blog by ID",
+                "operationId": "45089f2d9fd49db9b2d3157a61ee03aa",
+                "parameters": [
+                    {
+                        "name": "id",
+                        "in": "path",
+                        "description": "ID của blog",
+                        "required": true,
+                        "schema": {
+                            "type": "integer"
+                        }
+                    }
+                ],
+                "responses": {
+                    "200": {
+                        "description": "Chi tiết blog",
+                        "content": {
+                            "application/json": {
+                                "schema": {
+                                    "$ref": "#/components/schemas/Blog"
+                                }
+                            }
+                        }
+                    },
+                    "404": {
+                        "description": "Blog not found"
+                    }
+                }
+            },
+            "delete": {
+                "tags": [
+                    "Blogs"
+                ],
+                "summary": "Delete blog by id",
+                "operationId": "824df25595861f5d36a050b5476b5a38",
+                "parameters": [
+                    {
+                        "name": "id",
+                        "in": "path",
+                        "description": "ID của blog cần xóa",
+                        "required": true,
+                        "schema": {
+                            "type": "integer"
+                        }
+                    }
+                ],
+                "responses": {
+                    "200": {
+                        "description": "Xóa thành công",
+                        "content": {
+                            "application/json": {
+                                "schema": {
+                                    "properties": {
+                                        "message": {
+                                            "type": "string",
+                                            "example": "Blog deleted successfully"
+                                        }
+                                    },
+                                    "type": "object"
+                                }
+                            }
+                        }
+                    }
+                }
+            }
+        }
+    },
+    "components": {
+        "schemas": {
+            "Blog": {
+                "required": [
+                    "location",
+                    "time_read",
+                    "content"
+                ],
+                "properties": {
+                    "id": {
+                        "type": "integer",
+                        "example": 1
+                    },
+                    "location": {
+                        "type": "string",
+                        "example": "Hà Nội"
+                    },
+                    "up_time": {
+                        "type": "string",
+                        "format": "date-time",
+                        "example": "2025-03-25 12:00:00"
+                    },
+                    "time_read": {
+                        "type": "integer",
+                        "example": 5
+                    },
+                    "content": {
+                        "type": "string",
+                        "example": "Nội dung blog..."
+                    },
+                    "image": {
+                        "type": "string",
+                        "example": "https://example.com/image.jpg",
+                        "nullable": true
+                    }
+                },
+                "type": "object"
+            }
+        }
+    },
+    "tags": [
+        {
+            "name": "Blogs",
+            "description": "Blogs"
+        }
+    ]
+}
